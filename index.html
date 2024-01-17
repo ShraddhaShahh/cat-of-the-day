@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Meet the Cat of the Day!</title>
+<meta charset="UTF-8">
+<meta name="description" content="Discover Daily Mischief and Feline Folly!">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="src/main.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://use.typekit.net/zzf5rbd.css">
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div class="hero">
+            
+                <div class="headingDiv" id="headingDiv">
+                    
+                    <h1>Meet the Cat of the Day!</h1>
+                    
+                    <!--clicking the button plays a meow audio and shows a cat image and description-->
+                    <div class="btn-container">
+                        <button class="meetnow" onClick="showCat(); playMeow();">Meet Cat</button>
+                    </div>
+                    <audio src="cat-meow.mp3" id="catMeowAudio"></audio>
+                    <!-- Cat meow audio downloaded from Pixabay -->
+
+                </div>
+
+                <!--This is the hidden container with the cat image and description-->
+                <div class="cat-container hidden" id="catContainer">
+                    <div class="cat-info">
+                        
+                        <div class="cat-image">
+                        <img src="" alt="Cat of the Day" id="catImage">
+                        </div>
+                        
+                        <div class="cat-details">
+                        <h2 id="catName"></h2>
+                        <p id="catDescription"></p>
+                        <audio id="purringSound" src="cat-purr1.mp3" preload="auto"></audio>
+                        <audio id="purringSound2" src="cat-purr2.mp3" preload="auto"></audio>
+                        <!--Purring sounds downloaded from Pixabay-->
+                        <!-- The purring sound changes everytime a new cat is displayed. -->
+                        </div>
+                    </div>
+
+                    <!-- Adding a button below the cat info for user to click on and see a different description. -->
+                    <div class="btn-container--new">
+                        <button class="meetnow--new" onClick="showCat(); playMeow();">Meet Another Cat</button>
+                    </div>
+                    <audio src="cat-meow.mp3" id="catMeowAudio"></audio>
+                    <!-- Reusing the same button, but adding a new class for additional styling. -->
+                    
+                </div>
+        </div>
+    </div>
+</body>
+</html>
