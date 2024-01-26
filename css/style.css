@@ -19,6 +19,9 @@ html {
 
 .hero {
     background-image: url(../img/banner1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     height: 100vh;
